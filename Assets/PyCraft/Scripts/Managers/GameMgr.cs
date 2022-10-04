@@ -66,13 +66,13 @@ namespace PyCraft
                         baseVerticesPosDic[PanelType.Top].Add(new Vector3(1, 1, 1));
                         baseVerticesPosDic[PanelType.Top].Add(new Vector3(1, 1, 0));
                     }
-                    if (!baseVerticesPosDic.ContainsKey(PanelType.Down))
+                    if (!baseVerticesPosDic.ContainsKey(PanelType.Bottom))
                     {
-                        baseVerticesPosDic.Add(PanelType.Down, new List<Vector3>());
-                        baseVerticesPosDic[PanelType.Down].Add(new Vector3(0, 0, 0));
-                        baseVerticesPosDic[PanelType.Down].Add(new Vector3(0, 0, 1));
-                        baseVerticesPosDic[PanelType.Down].Add(new Vector3(1, 0, 1));
-                        baseVerticesPosDic[PanelType.Down].Add(new Vector3(1, 0, 0));
+                        baseVerticesPosDic.Add(PanelType.Bottom, new List<Vector3>());
+                        baseVerticesPosDic[PanelType.Bottom].Add(new Vector3(0, 0, 0));
+                        baseVerticesPosDic[PanelType.Bottom].Add(new Vector3(1, 0, 0));
+                        baseVerticesPosDic[PanelType.Bottom].Add(new Vector3(1, 0, 1));
+                        baseVerticesPosDic[PanelType.Bottom].Add(new Vector3(0, 0, 1));
                     }
                 }
                 return baseVerticesPosDic;
@@ -90,7 +90,6 @@ namespace PyCraft
                 Debug.Log("预制件加载成功!");
             });
             await UniTask.WhenAll(prefabTask);
-
         }
     }
 }
